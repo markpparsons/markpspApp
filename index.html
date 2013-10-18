@@ -3,11 +3,26 @@
 	<head>
 	<title>&nbsp;</title>
 	<style>
+		#page{
+		background-image:url('images/background.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		}
 		#login{
 			width: 75%;
 			position: relative;
 			margin: 120px auto;
+			background: gray;
+			opacity: 0.8;
+			text-align: center;
+			border-radius: 50px;
 		}
+		
+		#login > label{
+			font-size: 130%;
+			color: white;
+		}
+		
 		#header{
 			background-color: gray;
 			padding: 5px;
@@ -31,7 +46,7 @@
 	<script src="js/main.js"></script>
 	</head>
 	<body>
-		<div data-role="page">
+		<div data-role="page" id="page">
 			<div data-role="header" id="header">
 				<h2>markpsp.com</h2>
 			</div>
@@ -43,7 +58,7 @@
 					<label for="email">Email Address:</label><br/>
 					<input type="text" name="email" /><br/>
 					<label for="password">Password:</label><br/>
-					<input type="password" name="password" />
+					<input type="password" name="password" /><br/>
 					<input type="submit" value="Sign in"/>
 				</div>
 				</fieldset>
