@@ -13,7 +13,15 @@
 		$(document).on("swiperight",function(event,ui){
 			$("#myPanel").panel("open");
 		});
+
 	</script>
+	<style>
+		#page{
+			background-image:url('images/background.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
 	</head>
 	<body>
 		<div data-role="page" id="page" class="ui-responsive-panel">
@@ -25,7 +33,7 @@
 					<input type="text" name="email" /><br/>
 					<label for="password">Password:</label><br/>
 					<input type="password" name="password" /><br/><br/>
-					<input type="submit" value="Sign in"/>
+					<button type="submit" value="Sign In">Sign in</button>
 				</div>
 				</fieldset>
 				</form>
