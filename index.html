@@ -8,12 +8,19 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
 	<script>
 		$(document).on("swiperight",function(event,ui){
 			$("#myPanelLeft").panel("open");
 		});
-
+	</script>
+	<script>
+		$(':jqmData(url^=pageAbout)').live('pagebeforecreate',function(event){
+			$(this)
+				.filter(':jqmData(url*=ui-page)')
+				.find(':jqmData(role=header)')
+				.prepend('<a href="#" data-rel="back" data-icon="back">Back</a>');
+		});
 	</script>
 	</head>
 	<body>
@@ -33,7 +40,7 @@
 			</div>
 			<div data-role="header" id="header">
 				<a href="#myPanelLeft" data-role="button">Sign in</a>
-				<a href="#pageAbout" data-role="button" data-icon="gear" data-inline="true" data-transition="flow">About Mark</a>
+				<a href="#pageAbout" data-role="button" data-icon="gear" class="ui-btn-right" data-transition="flow">About Mark</a>
 				<h2>markpsp.com</h2>
 			</div>
 			<!-- header -->
@@ -44,9 +51,48 @@
 		</div> <!-- end page -->
 		<div data-role="page" data-title="Mark P. Parsons" id="pageAbout" class="ui-responsive-panel">
 			<div data-role="header">
-				<h3>Mark P. Parsons</h3><br/>
+				<h3>Mark P. Parsons</h3>
 				<a href="#page" data-role="button" data-icon="arrow-1" data-rel="back" >back</a>
 				<a href="mailto:mark.p.parsons@gmail.com" data-role="button" data-icon="star">Email me!</a>
+			</div>
+			<div data-role="content">
+					<ul data-role="listview">
+						<li><div>Skill Summary</div>
+							<span class="ui-li-count">7</span>
+							<ul>
+								<li data-icon="back" data-theme="e"><a href="#" data-type="button" data-rel="back">Back</a></li>
+								<li>Developed and Deployed web solutions including my own web-site deployment using the latest open source technologies including HTML5, CSS3, Javascript, JQuery, Ajax, PHP and MySQL
+								</li>
+								<li>Developed, tested, deployed in 4 months markpsp.com which maintains over 10 live members, 3 databases and 1 live golf browser based application
+								</li>
+								<li><a data-type="button" href="http://markpsp.com/social_site/root">markpsp.com</a></li>
+								<li>Utilize and employ an Agile method and approach to my personal development of projects and solutions
+								</li>
+								<li>Develop, test and debug in a variety of programming, scripting, and markup languages including: ASP.Net MVC 4, C# .NET, HTML5, CSS3, Javascript, JQuery, Ajax, PHP, MySQL, Visual Basic Applications</li>
+								<li>Apply object oriented programming (OOP) techniques to web, and application based development</li>
+								<li>Developed with multiple integrated development environments (IDE) MS Visual Studio 2010, MS Visual Studio 2012, Notepad ++,  MySQL workbench, MS Access</li>
+								<li>Exceptional communication and customer service skills with a punctual, committed approach to work and standards.</li>
+							</ul>
+						</li>
+						<li><div>Skill Summary</div>
+							<span class="ui-li-count">7</span>
+							<ul>
+								<li data-icon="back" data-theme="e"><a href="#" data-type="button" data-rel="back">Back</a></li>
+								<li>Developed and Deployed web solutions including my own web-site deployment using the latest open source technologies including HTML5, CSS3, Javascript, JQuery, Ajax, PHP and MySQL
+								</li>
+								<li>Developed, tested, deployed in 4 months markpsp.com which maintains over 10 live members, 3 databases and 1 live golf browser based application
+								</li>
+								<li><a data-type="button" href="http://markpsp.com/social_site/root">markpsp.com</a></li>
+								<li>Utilize and employ an Agile method and approach to my personal development of projects and solutions
+								</li>
+								<li>Develop, test and debug in a variety of programming, scripting, and markup languages including: ASP.Net MVC 4, C# .NET, HTML5, CSS3, Javascript, JQuery, Ajax, PHP, MySQL, Visual Basic Applications</li>
+								<li>Apply object oriented programming (OOP) techniques to web, and application based development</li>
+								<li>Developed with multiple integrated development environments (IDE) MS Visual Studio 2010, MS Visual Studio 2012, Notepad ++,  MySQL workbench, MS Access</li>
+								<li>Exceptional communication and customer service skills with a punctual, committed approach to work and standards.</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</body>
