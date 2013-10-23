@@ -18,9 +18,9 @@
 	</head>
 	<body>
 		<div data-role="page" id="page" class="ui-responsive-panel">
-			<div data-role="panel" id="myPanel" data-theme="b" data-display="push">
+			<div data-role="panel" id="myPanelLeft" data-theme="b" data-display="push">
 				<form id="myForm" method="post" action="http://markpsp.com/markpspApp/appLogin.php" data-transition="flow" data-direction="reverse">
-				<fieldset>
+				<fieldset data-role="fieldcontain">
 				<div data-role = "fieldcontain" id="login">
 					<label for="email">Email Address:</label><br/>
 					<input type="text" name="email" /><br/>
@@ -30,10 +30,10 @@
 				</div>
 				</fieldset>
 				</form>
-
 			</div>
 			<div data-role="header" id="header">
-				<a href="#myPanel" data-role="button">Sign in</a>
+				<a href="#myPanelLeft" data-role="button">Sign in</a>
+				<a href="#pageAbout" data-role="button" data-icon="gear" data-inline="true" data-transition="flow">About Mark</a>
 				<h2>markpsp.com</h2>
 			</div>
 			<!-- header -->
@@ -42,5 +42,12 @@
 			
 			</div>
 		</div> <!-- end page -->
+		<div data-role="page" data-title="Mark P. Parsons" id="pageAbout" class="ui-responsive-panel">
+			<div data-role="header">
+				<h3>Mark P. Parsons</h3><br/>
+				<a href="#page" data-role="button" data-icon="arrow-1" data-rel="back" >back</a>
+				<a href="mailto:mark.p.parsons@gmail.com" data-role="button" data-icon="star">Email me!</a>
+			</div>
+		</div>
 	</body>
 </html>
