@@ -14,6 +14,12 @@
 			$("#myPanelLeft").panel("open");
 		});
 	</script>
+	<style>
+		#welcome{
+			border: 2px solid gray;
+			box-shadow: 10px 10px 10px;
+		}
+	</style>
 	</head>
 	<body>
 		<div data-role="page" id="page" class="ui-responsive-panel">
@@ -31,11 +37,14 @@
 				<h2>markpsp.com</h2>
 			</div>
 			<!-- header -->
-			<div data-role="content">
-				<p>Front Page Content</p>
+			<div data-role="content" data-theme="a" data-content-theme="a">
+				<img id="welcome" src="images/welcome.png"></img>
+				<p>   Welcome to the markpsp.com web app and launching pad for the site and for all the mobile apps.</p><br/>
+				<p>   This app is the start of something very exciting for me and the future of my work.</p>
+				<p>   Lot's of <3 to my wife Natalie!  I know I spend way to much time infront of the computer.</p>
 			</div>
 		</div> <!-- end page -->
-		<div data-role="page" data-title="Mark P. Parsons" id="pageAbout" class="ui-responsive-panel">
+		<div data-role="page" data-title="Mark P. Parsons" id="pageAbout" class="ui-responsive-panel" >
 			<div data-role="header">
 				<h3>Mark P. Parsons</h3>
 				<a href="#page" data-role="button" data-icon="arrow-1" data-rel="back" >back</a>
