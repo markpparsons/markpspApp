@@ -8,35 +8,30 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-	<!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script>
 		$(document).on("swiperight",function(event,ui){
 			$("#myPanelLeft").panel("open");
 		});
 	</script>
 	<script>
-		$(':jqmData(url^=pageAbout)').live('pagebeforecreate',function(event){
-			$(this)
-				.filter(':jqmData(url*=ui-page)')
-				.find(':jqmData(role=header)')
-				.prepend('<a href="#" data-rel="back" data-icon="back">Back</a>');
-		});
+		$('[data-role=page]').live('pagebeforeshow', function (event, ui) {
+			 if (this.children[0].id == "twitterFeed") {
+				$("#twitter").html(
+					'<a class="twitter-timeline" href="https://twitter.com/markCPA1981" data-widget-id="337882339612954624">Tweets by @markCPA1981</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
+				}
+			 }
 	</script>
 	</head>
 	<body>
 		<div data-role="page" id="page" class="ui-responsive-panel">
 			<div data-role="panel" id="myPanelLeft" data-theme="b" data-display="push">
-				<form id="myForm" method="post" action="http://markpsp.com/markpspApp/appLogin.php" data-transition="flow" data-direction="reverse">
-				<fieldset data-role="fieldcontain">
-				<div data-role = "fieldcontain" id="login">
-					<label for="email">Email Address:</label><br/>
-					<input type="text" name="email" /><br/>
-					<label for="password">Password:</label><br/>
-					<input type="password" name="password" /><br/><br/>
-					<button type="submit" value="Sign In">Sign in</button>
+				<div data-role="content">
+					<ul data-role="listview">
+						<li><a href="#loginPage" data-type="button" data-transition="flow">Sign in</a></li>
+						<li><a href="#twitterFeed" data-type="button" data-transition="flow">Follow me on twitter</a></li>
+					</ul>
 				</div>
-				</fieldset>
-				</form>
 			</div>
 			<div data-role="header" id="header">
 				<a href="#myPanelLeft" data-role="button">Sign in</a>
@@ -45,8 +40,7 @@
 			</div>
 			<!-- header -->
 			<div data-role="content">
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			
+				<p>Front Page Content</p>
 			</div>
 		</div> <!-- end page -->
 		<div data-role="page" data-title="Mark P. Parsons" id="pageAbout" class="ui-responsive-panel">
@@ -94,6 +88,37 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+			<div data-role="page" id="loginPage" data-theme="b" data-display="flow">
+				<div data-role="header">
+					<h3>markpsp.com</h3>
+					<a href="#page" data-role="button" data-icon="arrow-1" data-rel="back" >back</a>
+					<a href="mailto:mark.p.parsons@gmail.com" data-role="button" data-icon="star">Email me!</a>
+				</div>
+				<div data-role="content">
+					<h3>Sign in</h3>
+					<form id="myForm" method="post" action="http://markpsp.com/markpspApp/appLogin.php" data-transition="flow" data-direction="reverse">
+					<fieldset data-role="fieldcontain">
+					<div data-role = "fieldcontain" id="login">
+						<label for="email">Email Address:</label><br/>
+						<input type="text" name="email" /><br/>
+						<label for="password">Password:</label><br/>
+						<input type="password" name="password" /><br/><br/>
+						<button type="submit" value="Sign In">Sign in</button>
+					</div>
+					</fieldset>
+					</form>
+				</div>
+			</div>
+			<div data-role="page" id="twitterFeed" data-display="flow">
+				<div data-role="header">
+					<h3>Follow me on Twitter!</h3>
+					<a href="#page" data-role="button" data-icon="arrow-1" data-rel="back" >back</a>
+					<a href="mailto:mark.p.parsons@gmail.com" data-role="button" data-icon="star">Email me!</a>
+				</div>
+				<div data-role="content">
+					<div id="twitter">
+					</div>
+				</div>
+			</div>
 	</body>
 </html>
