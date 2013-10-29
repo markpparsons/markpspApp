@@ -175,7 +175,7 @@
 					<h2>markpsp.com</h2>
 				</div>
 				<div data-role="content">
-					<h3>Sign in</h3>
+					<h3>Login</h3>
 					<form id="myForm" method="post" action="http://markpsp.com/markpspApp/appLogin.php" data-transition="flow" data-direction="reverse">
 					<fieldset data-role="fieldcontain">
 					<div data-role = "fieldcontain" id="login">
@@ -183,12 +183,12 @@
 						<input type="text" name="email" /><br/>
 						<label for="password">Password:</label><br/>
 						<input type="password" name="password" /><br/><br/>
-						<button type="submit" value="Sign In">Sign in</button>
+						<button type="submit" value="Log In">Login</button>
 					</div>
 					</fieldset>
 					</form><br/><br/>
 					<div style="text-align: center">
-						<a href="#signUp" data-transition="turn">Sign Up for markpsp.com</a>
+						<a href="#signUpPage" data-transition="turn">Sign Up for markpsp.com</a>
 					</div>
 				</div>
 				<div data-role="footer" data-id="myFooter" data-position="fixed">
@@ -204,27 +204,30 @@
 			</div>
 <!-- LoginPage page End -->
 <!-- signUp page Begin -->
-			<div data-role="page" id="signUp" data-theme="b" data-display="flow">
+			<div data-role="page" id="signUpPage" data-theme="b" data-display="flow">
 				<div data-role="header" id="myHeader" data-position="fixed">
 					<h2>markpsp.com</h2>
 				</div>
 				
 				<div data-role="content">
 					<h3>Sign Up</h3>
-					<!--<form id="signUpForm" method="post" action="http://markpsp.com/markpspApp/appSignUp.php" data-transition="flow" data-direction="reverse">
+					<form id="signUpForm" method="post" action="http://markpsp.com/markpspApp/appSignUp.php" data-transition="flow" data-direction="reverse">
 					<fieldset data-role="fieldcontain">
 					<div data-role = "fieldcontain" id="login">
 						<label for="email">Email Address:</label><br/>
 						<input type="text" name="email" /><br/>
 						<label for="password">Password:</label><br/>
-						<input type="password" name="password" /><br/><br/>
-						<button type="submit" value="Sign In">Sign in</button>
+						<input type="password" name="password" /><br/>
+						<label for="confirmPassword">Confirm Password:</label><br/>
+						<input type="password" name="confirmPassword" /><br/>
+						<br/>
+						<button type="submit" value="Sign up">Sign up</button>
 					</div>
 					</fieldset>
 					</form><br/><br/>
 					<div style="text-align: center">
-						<a href="#signUp">Sign Up for markpsp.com</a>
-					</div>-->
+						<a href="#loginPage" data-transition="turn">I already have a login</a>
+					</div>
 				</div>
 				
 				<div data-role="footer" data-id="myFooter" data-position="fixed">
