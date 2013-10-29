@@ -28,13 +28,23 @@
 	<body>
 		<div data-role="page" id="page" class="ui-responsive-panel">
 			<div data-role="panel" id="myPanelLeft" data-theme="b" data-display="push">
-				<div data-role="header">
-					<h2>Follow me!</h2>
-				</div>
-				<div data-role="content">
+				<div class="ui-panel-inner">
 					<ul data-role="listview">
-						<li><a href="#loginPage" data-type="button" data-transition="flow">Sign in</a></li>
-						<li><a href="#twitterFeed" data-type="button" data-transition="flow">Twitter</a></li>
+						<li data-role="list-divider">Follow Me</li>
+						<li><a href="#loginPage" data-transition="flow">
+						<img src="images/logo.png">
+						<h2>Sign in</h2>
+						<p>continue to markpsp.com social site</p>
+						</a></li>
+						<li><a href="#twitterFeed" data-transition="flow">
+						<img src="images/twitter.png">
+						<h2>Twitter</h2>
+						<p>Follow me on twitter</p>
+						</a></li>
+						<li><a href="mailto:mark.p.parsons@gmail.com">
+						<img src="images/email_icon.jpg">
+						<h2>mark.p.parsons@gmail.com</h2>
+						</a></li>
 					</ul>
 				</div>
 			</div>
@@ -55,7 +65,7 @@
 					<ul>
 						<li><a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="top">Back</a></li>
 						<li><a href="#myPanelLeft" data-role="button" data-icon="grid" data-iconpos="top">Sign in</a></li>
-						<li><a href="#page" data-role="button" data-icon="home" data-iconpos="top" data-transition="flow">Home</a></li>
+						<li><a href="#page" class="ui-btn-active ui-state-persist" data-role="button" data-icon="home" data-iconpos="top" data-transition="flow">Home</a></li>
 						<li><a href="#pageAbout" data-role="button" data-icon="star" data-iconpos="top" data-transition="flow">About Mark</a></li>
 					</ul>	
 				</div>
@@ -109,7 +119,7 @@
 						<li><a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="top">Back</a></li>
 						<li><a href="#myPanelLeft" data-role="button" data-icon="grid" data-iconpos="top">Sign in</a></li>
 						<li><a href="#page" data-role="button" data-icon="home" data-iconpos="top" data-transition="flow">Home</a></li>
-						<li><a href="#pageAbout" data-role="button" data-icon="star" data-iconpos="top" data-transition="flow">About Mark</a></li>
+						<li><a href="#pageAbout" class="ui-btn-active ui-state-persist" data-role="button" data-icon="star" data-iconpos="top" data-transition="flow">About Mark</a></li>
 					</ul>	
 				</div>
 			</div>
