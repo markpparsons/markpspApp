@@ -14,6 +14,15 @@
 			$("#myPanelLeft").panel("open");
 		});
 	</script>
+	<script>	
+		#(document).bind('pageinit')
+			function Iagree()
+			{
+				$("#ToA").innerHTML("Welcome");
+				//alert("I'm in");
+			}
+		});
+	</script>
 	<style>
 		#welcome{
 			border: 2px solid gray;
@@ -204,12 +213,11 @@
 			</div>
 <!-- LoginPage page End -->
 <!-- signUp page Begin -->
-			<div data-role="page" id="signUpPage" data-theme="b" data-display="flow">
+			<div data-role="page" id="signUpPage" data-display="flow">
 				<div data-role="header" id="myHeader" data-position="fixed">
 					<h2>markpsp.com</h2>
 				</div>
-				
-				<div data-role="content">
+				<div data-role="content"  data-theme="b">
 					<h3>Sign Up</h3>
 					<form id="signUpForm" method="post" action="http://markpsp.com/markpspApp/appSignUp.php" data-transition="flow" data-direction="reverse">
 					<fieldset data-role="fieldcontain">
@@ -221,15 +229,15 @@
 						<label for="confirmPassword">Confirm Password:</label><br/>
 						<input type="password" name="confirmPassword" /><br/>
 						<br/>
+						<a href="#agree" data-rel="dialog" data-role="button" data-icon="alert" data-iconpos="right" data-theme="e" id="ToA">Terms of Agreement</a>
 						<button type="submit" value="Sign up">Sign up</button>
 					</div>
 					</fieldset>
-					</form><br/><br/>
+					</form><br/>
 					<div style="text-align: center">
 						<a href="#loginPage" data-transition="turn">I already have a login</a>
 					</div>
 				</div>
-				
 				<div data-role="footer" data-id="myFooter" data-position="fixed">
 					<div data-role="navbar">
 						<ul>
@@ -241,6 +249,28 @@
 					</div>
 				</div>
 			</div>
+	<!-- dialog start -->
+				<div id="agree" data-role="dialog"  data-theme= "c">
+					<div data-role="header">
+						<h1>Terms of Agreement</h1>
+					</div>
+					<div data-role="content">
+						<ul data-role="listview">
+							<li data-role="list-divider">Terms of Agreement</li>
+							<li>Respect other members</li>
+							<li>Spamming other members may result in your removal and ban from the app and markpsp.com's websites.</li>
+							<li>Take a bath before showing up</li>
+							<li>Understand that this is my personal site and app and I get the last say as to if someone will be banned</li>
+							<li>I reserve the right to change and modify all information whenever I feel it is nessesary</li>
+							<li>I do not care about your passwords.  I will NOT and DO NOT have the ability to see them</li>
+							<li>HAVE FUN!!</li>
+							<li data-theme="e">
+								<a href="#signUpPage" data-type="button" id="Iagree" onclick="Iagree()">Sounds Good</a>
+							</li>
+						</ul>	
+					</div>
+				</div>
+	<!-- dialog end -->
 <!-- signUp page end -->
 <!-- twitterFeed page Begin -->				
 			<div data-role="page" id="twitterFeed" data-display="flow">
