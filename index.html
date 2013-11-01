@@ -14,6 +14,12 @@
 			$("#myPanelLeft").panel("open");
 		});
 	</script>
+	<script>
+	function loginFlip()
+	{
+		`$.mobile.changePage('http://markpsp.com/markpspApp/appLogin','#loginpage', { transition: "flow"} ); 
+	}
+	</script>
 	<script>	
 		#(document).bind('pageinit')
 			function Iagree()
@@ -42,7 +48,7 @@
 				<div class="ui-panel-inner">
 					<ul data-role="listview">
 						<li data-role="list-divider">Follow Me</li>
-						<li><a href="#loginPage" data-transition="flow">
+						<li><a href="#" onclick="loginFlip" data-transition="flow">
 						<img src="images/icons/logo.png">
 						<h2>Sign in</h2>
 						<p>continue to markpsp.com social site</p>
